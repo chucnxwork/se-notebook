@@ -3,7 +3,7 @@ const { fs, path } = require('@vuepress/shared-utils')
 module.exports = ctx => ({
   title: 'Hello VuePress',
   description: 'Just playing around',
-  base: '/docs/',
+  base: '/se-notebook/',
   dest: 'docs',
   configureWebpack: {
     resolve: {
