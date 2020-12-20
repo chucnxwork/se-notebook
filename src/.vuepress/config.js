@@ -4,7 +4,7 @@ module.exports = ctx => ({
   title: 'Hello VuePress',
   description: 'Just playing around',
   base: '/docs/',
-  dest: 'dist',
+  dest: 'docs',
   configureWebpack: {
     resolve: {
       alias: {
