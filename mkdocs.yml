@@ -14,6 +14,12 @@ nav:
     - Apache/Xampp: SoftwareEngineering/ApacheXampp/ApacheXampp.md
     - Big Data: SoftwareEngineering/BigData/BigData.md
     - C:
-      - SoftwareEngineering/C/timgiaoduongtron.cpp
-      - SoftwareEngineering/C/hinhtronhinhchunhatnhonhat.cpp
-      - SoftwareEngineering/C/hinhtronhinhchunhatnhonhat - Copy.cpp
+      - Tim giao duong tron: SoftwareEngineering/C/timgiaoduongtron.cpp
+      - Hinh tron, hinh chu nhat nho nhat: SoftwareEngineering/C/hinhtronhinhchunhatnhonhat.cpp
+      - Hinh tron, hinh chu nhat nho nhat 2: SoftwareEngineering/C/hinhtronhinhchunhatnhonhat - Copy.cpp
+    - CMD: SoftwareEngineering/CMD/batcmd.md
+    - CMS (Content Management System): SoftwareEngineering/CMS/CMS.md
+    - Crystal Reports: SoftwareEngineering/CrystalReports/CrystalReports.md
+    - Hosting: SoftwareEngineering/Hosting/Hosting.md
+    - HTML and Web: SoftwareEngineering/HTMLandWeb/HTML.md
+    - Jasper Report: SoftwareEngineering/JasperReport.md
