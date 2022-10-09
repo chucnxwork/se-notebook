@@ -1,4 +1,6 @@
-site_name: My Docs
+site_name: My Personal Docs
+site_url: https://chucnxwork.github.io/se-notebook/
+site_author: Chuc NX
 
 # Repository
 repo_name: chucnxwork/se-notebook
@@ -10,6 +12,9 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
     - toc.follow
   palette:
     - scheme: default

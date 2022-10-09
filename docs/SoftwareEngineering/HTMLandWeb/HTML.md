@@ -1,4 +1,4 @@
-# Avoid CSRF
+## Avoid CSRF
 
 ```js
 if (request.getHeader('X-Requested-With') == null) {
@@ -6,13 +6,13 @@ if (request.getHeader('X-Requested-With') == null) {
 }
 ```
 
-# Redirect HTTP to HTTPS
+## Redirect HTTP to HTTPS
 
 You need to put a canonical link at the head of your page to tell search engines that HTTPS is the best way to get to your site.
 Set `<link rel="canonical" href="https://…"/>` tags in your pages. This helps search engines determine the best way to get to your site.
 
-# File .htaccess
-## Cache control
+## File .htaccess
+### Cache control
 ```
     ### HEADER CACHING
     # https://www.askapache.com/htaccess/speed-up-sites-with-htaccess-caching/
@@ -30,7 +30,7 @@ Set `<link rel="canonical" href="https://…"/>` tags in your pages. This helps 
     </FilesMatch>
 ```
 
-# Table scroll with fixed header (IE not supported)
+## Table scroll with fixed header (IE not supported)
 ```html
 <html>
 

@@ -1,18 +1,18 @@
 Window bat file
 
-# Batch rename
+## Batch rename
 
 ```bash
 ren "D:\folder\filename*.jpg" filename*.png
 ```
 
-# Comment
+## Comment
 
 ```bash
 rem echo "abc"
 ```
 
-# Timeout and interval cmd windows
+## Timeout and interval cmd windows
 
 Create bat file
 
@@ -23,7 +23,7 @@ timeout /t 600
 goto loop
 ```
 
-# Powershell loop and sleep
+## Powershell loop and sleep
 
 ```bat
 while ($true){
