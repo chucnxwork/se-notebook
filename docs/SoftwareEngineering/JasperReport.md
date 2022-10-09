@@ -1,5 +1,6 @@
 # Troubleshooting
 ## iReport not opening? Java 8 may be the issue
+
 1. Download and install JDK7
 (http://www.oracle.com/technetwork/java/javase/down...ds/jdk7-downloads-1880260.html)
 

@@ -1,4 +1,5 @@
 # Avoid CSRF
+
 ```js
 if (request.getHeader('X-Requested-With') == null) {
   // Without the `X-Requested-With` header, this request could be forged. Aborts.
@@ -6,6 +7,7 @@ if (request.getHeader('X-Requested-With') == null) {
 ```
 
 # Redirect HTTP to HTTPS
+
 You need to put a canonical link at the head of your page to tell search engines that HTTPS is the best way to get to your site.
 Set `<link rel="canonical" href="https://…"/>` tags in your pages. This helps search engines determine the best way to get to your site.
 

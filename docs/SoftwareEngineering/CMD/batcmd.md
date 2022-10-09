@@ -1,5 +1,3 @@
-[toc]
-
 Window bat file
 
 # Batch rename
