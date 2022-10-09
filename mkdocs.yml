@@ -12,3 +12,8 @@ nav:
   - Home: index.md
   - Software Engineering:
     - Apache/Xampp: SoftwareEngineering/ApacheXampp/ApacheXampp.md
+    - Big Data: SoftwareEngineering/BigData/BigData.md
+    - C:
+      - SoftwareEngineering/C/timgiaoduongtron.cpp
+      - SoftwareEngineering/C/hinhtronhinhchunhatnhonhat.cpp
+      - SoftwareEngineering/C/hinhtronhinhchunhatnhonhat - Copy.cpp
