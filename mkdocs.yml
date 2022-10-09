@@ -1,11 +1,29 @@
 site_name: My Docs
+
+# Repository
+repo_name: chucnxwork/se-notebook
+repo_url: https://github.com/chucnxwork/se-notebook
+
 theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.top
     - navigation.tracking
     - toc.follow
-    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 # Page tree
 nav:
