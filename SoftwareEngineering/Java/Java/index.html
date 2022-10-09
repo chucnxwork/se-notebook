@@ -1,0 +1,1554 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Chuc NX">
+      
+      
+        <link rel="canonical" href="https://chucnxwork.github.io/se-notebook/SoftwareEngineering/Java/Java/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>Java - My Personal Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#encryption-using-aes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My Personal Docs" class="md-header__button md-logo" aria-label="My Personal Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Personal Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/chucnxwork/se-notebook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chucnxwork/se-notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ApacheXampp/ApacheXampp/" class="md-tabs__link md-tabs__link--active">
+        Software Engineering
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Personal Docs" class="md-nav__button md-logo" aria-label="My Personal Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Personal Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/chucnxwork/se-notebook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chucnxwork/se-notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Software Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software Engineering" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Software Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ApacheXampp/ApacheXampp/" class="md-nav__link">
+        Apache/Xampp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BigData/BigData/" class="md-nav__link">
+        Big Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="C" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/timgiaoduongtron.cpp" class="md-nav__link">
+        Tim giao duong tron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/hinhtronhinhchunhatnhonhat.cpp" class="md-nav__link">
+        Hinh tron, hinh chu nhat nho nhat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/hinhtronhinhchunhatnhonhat%20-%20Copy.cpp" class="md-nav__link">
+        Hinh tron, hinh chu nhat nho nhat 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CMD/batcmd/" class="md-nav__link">
+        CMD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CMS/CMS/" class="md-nav__link">
+        CMS (Content Management System)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CrystalReports/CrystalReports/" class="md-nav__link">
+        Crystal Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hosting/Hosting/" class="md-nav__link">
+        Hosting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTMLandWeb/HTML/" class="md-nav__link">
+        HTML and Web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JasperReport/" class="md-nav__link">
+        Jasper Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Java" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Java
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encryption-using-aes" class="md-nav__link">
+    Encryption using AES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-http-request" class="md-nav__link">
+    Send Http request
+  </a>
+  
+    <nav class="md-nav" aria-label="Send Http request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utf-8-encoding" class="md-nav__link">
+    UTF 8 Encoding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-multipart-file" class="md-nav__link">
+    Send multipart file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-property-value-in-resource-file" class="md-nav__link">
+    Read property value in resource file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputstream-to-string" class="md-nav__link">
+    InputStream to String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bufferedreader-to-string" class="md-nav__link">
+    BufferedReader to String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-local-jar-file" class="md-nav__link">
+    Add local jar file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-return-file" class="md-nav__link">
+    Api return file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-remote-application-in-eclipse" class="md-nav__link">
+    Debug remote application in Eclipse
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug remote application in Eclipse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug-general-application" class="md-nav__link">
+    Debug general application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-spark-application-running-locally" class="md-nav__link">
+    Debug Spark application running Locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-spark-application-running-on-remote-server" class="md-nav__link">
+    Debug Spark application running on Remote server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-eclipse" class="md-nav__link">
+    Configure Eclipse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AesEncryption.java" class="md-nav__link">
+        AesEncryption.java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CustomHttpResponse.java" class="md-nav__link">
+        CustomHttpResponse.java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HttpRequestUtils.java" class="md-nav__link">
+        HttpRequestUtils.java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Utils.java" class="md-nav__link">
+        Utils.java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/markdown-quick-reference/" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encryption-using-aes" class="md-nav__link">
+    Encryption using AES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-http-request" class="md-nav__link">
+    Send Http request
+  </a>
+  
+    <nav class="md-nav" aria-label="Send Http request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utf-8-encoding" class="md-nav__link">
+    UTF 8 Encoding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-multipart-file" class="md-nav__link">
+    Send multipart file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-property-value-in-resource-file" class="md-nav__link">
+    Read property value in resource file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputstream-to-string" class="md-nav__link">
+    InputStream to String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bufferedreader-to-string" class="md-nav__link">
+    BufferedReader to String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-local-jar-file" class="md-nav__link">
+    Add local jar file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-return-file" class="md-nav__link">
+    Api return file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-remote-application-in-eclipse" class="md-nav__link">
+    Debug remote application in Eclipse
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug remote application in Eclipse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug-general-application" class="md-nav__link">
+    Debug general application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-spark-application-running-locally" class="md-nav__link">
+    Debug Spark application running Locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-spark-application-running-on-remote-server" class="md-nav__link">
+    Debug Spark application running on Remote server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-eclipse" class="md-nav__link">
+    Configure Eclipse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/chucnxwork/se-notebook/edit/master/docs/SoftwareEngineering/Java/Java.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Java</h1>
+
+<h2 id="encryption-using-aes">Encryption using AES</h2>
+<p>File pom.xml</p>
+<pre><code class="language-xml">&lt;!-- https://mvnrepository.com/artifact/commons-codec/commons-codec --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;commons-codec&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-codec&lt;/artifactId&gt;
+        &lt;version&gt;1.11&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<pre><code class="language-java">import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
+import org.apache.commons.codec.binary.Base64;
+
+public class Encryption {
+    private static final String KEY = &quot;Bar12345Bar12345&quot;; // 128 bit key
+    private static final String INIT_VECTOR = &quot;RandomInitVector&quot;; // 16 bytes IV
+
+    public static String encrypt(String key, String initVector, String value) {
+        try {
+            IvParameterSpec iv = new IvParameterSpec(initVector.getBytes(&quot;UTF-8&quot;));
+            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(&quot;UTF-8&quot;), &quot;AES&quot;);
+
+            Cipher cipher = Cipher.getInstance(&quot;AES/CBC/PKCS5PADDING&quot;);
+            cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
+
+            byte[] encrypted = cipher.doFinal(value.getBytes());
+
+            return Base64.encodeBase64String(encrypted);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public static String decrypt(String key, String initVector, String encrypted) {
+        try {
+            IvParameterSpec iv = new IvParameterSpec(initVector.getBytes(&quot;UTF-8&quot;));
+            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(&quot;UTF-8&quot;), &quot;AES&quot;);
+
+            Cipher cipher = Cipher.getInstance(&quot;AES/CBC/PKCS5PADDING&quot;);
+            cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
+
+            byte[] original = cipher.doFinal(Base64.decodeBase64(encrypted));
+
+            return new String(original);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public static String encrypt(String value) {
+        return encrypt(KEY, INIT_VECTOR, value);
+    }
+
+    public static String decrypt(String value) {
+        return decrypt(KEY, INIT_VECTOR, value);
+    }
+}
+</code></pre>
+<h2 id="send-http-request">Send Http request</h2>
+<pre><code class="language-java">public static String sendHttpRequest(String url, String method, HashMap&lt;String, String&gt; params, String data) {
+        HttpURLConnection connection = null;
+
+        try {
+            // Create connection
+            URL urlObj = new URL(url);
+            connection = (HttpURLConnection) urlObj.openConnection();
+
+            if (method != null &amp;&amp; !&quot;get&quot;.equalsIgnoreCase(method)) {
+                connection.setRequestMethod(method);
+            }
+
+            /*
+             * connection.setRequestProperty(&quot;Content-Type&quot;,
+             * &quot;application/x-www-form-urlencoded&quot;);
+             */
+
+            /*
+             * connection.setRequestProperty(&quot;Content-Length&quot;,
+             * Integer.toString(urlParameters.getBytes().length));
+             * connection.setRequestProperty(&quot;Content-Language&quot;, &quot;en-US&quot;);
+             */
+
+            if (params != null &amp;&amp; !params.isEmpty()) {
+                Set&lt;String&gt; keySet = params.keySet();
+                for(String key: keySet) {
+                    if(Utils.isNullOrEmpty(key)) {
+                        continue;
+                    }
+                    String value = params.get(key);
+                    connection.setRequestProperty(key, value);
+                }
+            }
+            connection.setUseCaches(false);
+
+            // Send request
+            if (&quot;POST&quot;.equals(method) || &quot;post&quot;.equals(method)) {
+                connection.setDoOutput(true);
+                DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
+                if (data != null) {
+                    wr.writeBytes(data);
+                }
+                wr.close();
+            }
+            // Get Response
+            InputStream is = connection.getInputStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+            StringBuilder response = new StringBuilder(); // or StringBuffer if Java version 5+
+            String line;
+            while ((line = rd.readLine()) != null) {
+                response.append(line);
+                response.append('\r');
+            }
+            rd.close();
+
+            return response.toString();
+        } catch (IOException e) {
+            try {
+                InputStream is = connection.getErrorStream();
+                BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = rd.readLine()) != null) {
+                    response.append(line);
+                    response.append('\r');
+                }
+                rd.close();
+                return response.toString();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+                return null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+    }
+
+    public static String sendGetRequest(String url, HashMap&lt;String, String&gt; params) {
+        return sendHttpRequest(url, &quot;GET&quot;, params, null);
+    }
+    public static String sendGetRequest(String url) {
+        return sendHttpRequest(url, &quot;GET&quot;, null, null);
+    }
+    public static String sendPostRequest(String url, HashMap&lt;String, String&gt; params, String data) {
+        return sendHttpRequest(url, &quot;POST&quot;, params, data);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sendPostRequest(&quot;http://localhost:8080/mavenTest3/TestServlet&quot;, null, null));
+    }
+
+</code></pre>
+<h3 id="utf-8-encoding">UTF 8 Encoding</h3>
+<pre><code class="language-java">// Send request         
+            if (&quot;POST&quot;.equals(method) || &quot;post&quot;.equals(method)) {           
+                connection.setDoOutput(true);
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), &quot;UTF-8&quot;));
+                if (data != null) {
+                    bw.write(data);
+                }
+                bw.flush();
+                bw.close();
+            }           
+
+            // Get Response
+            InputStream is = connection.getInputStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, &quot;UTF-8&quot;));
+            StringBuilder response = new StringBuilder();
+</code></pre>
+<h2 id="send-multipart-file">Send multipart file</h2>
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * This utility class provides an abstraction layer for sending multipart HTTP
+ * POST requests to a web server.
+ * @author 
+ *
+ */
+public class MultipartUtils {
+    private final String boundary;
+    private static final String LINE_FEED = &quot;\r\n&quot;;
+    private HttpURLConnection httpConn;
+    private String charset;
+    private OutputStream outputStream;
+    private PrintWriter writer;
+
+    /**
+     * This constructor initializes a new HTTP POST request with content type
+     * is set to multipart/form-data
+     * @param requestURL
+     * @param charset
+     * @throws IOException
+     */
+    public MultipartUtils(String requestURL, String charset, HashMap&lt;String, String&gt; headers)
+            throws IOException {
+        this.charset = charset;
+
+        // creates a unique boundary based on time stamp
+        boundary = &quot;===&quot; + System.currentTimeMillis() + &quot;===&quot;;
+
+        URL url = new URL(requestURL);
+        httpConn = (HttpURLConnection) url.openConnection();
+        httpConn.setUseCaches(false);
+        httpConn.setDoOutput(true); // indicates POST method
+        httpConn.setDoInput(true);
+        httpConn.setRequestProperty(&quot;Content-Type&quot;,
+                &quot;multipart/form-data; boundary=&quot; + boundary);
+
+        if (headers != null &amp;&amp; !headers.isEmpty()) {
+            Set&lt;String&gt; keySet = headers.keySet();
+            for (String key : keySet) {
+                if (Utils.isNullOrEmpty(key)) {
+                    continue;
+                }
+                String value = headers.get(key);
+                httpConn.setRequestProperty(key, value);
+            }
+        }
+
+        outputStream = httpConn.getOutputStream();
+        writer = new PrintWriter(new OutputStreamWriter(outputStream, charset),
+                true);
+    }
+
+    /**
+     * Adds a form field to the request
+     * @param name field name
+     * @param value field value
+     */
+    public void addFormField(String name, String value) {
+        writer.append(&quot;--&quot; + boundary).append(LINE_FEED);
+        writer.append(&quot;Content-Disposition: form-data; name=\&quot;&quot; + name + &quot;\&quot;&quot;)
+                .append(LINE_FEED);
+        writer.append(&quot;Content-Type: text/plain; charset=&quot; + charset).append(
+                LINE_FEED);
+        writer.append(LINE_FEED);
+        writer.append(value).append(LINE_FEED);
+        writer.flush();
+    }
+
+    /**
+     * Adds a upload file section to the request
+     * @param fieldName name attribute in &lt;input type=&quot;file&quot; name=&quot;...&quot; /&gt;
+     * @param uploadFile a File to be uploaded
+     * @throws IOException
+     */
+    public void addFilePart(String fieldName, File uploadFile)
+            throws IOException {
+        String fileName = uploadFile.getName();
+        writer.append(&quot;--&quot; + boundary).append(LINE_FEED);
+        writer.append(
+                &quot;Content-Disposition: form-data; name=\&quot;&quot; + fieldName
+                        + &quot;\&quot;; filename=\&quot;&quot; + fileName + &quot;\&quot;&quot;)
+                .append(LINE_FEED);
+        writer.append(
+                &quot;Content-Type: &quot;
+                        + URLConnection.guessContentTypeFromName(fileName))
+                .append(LINE_FEED);
+        writer.append(&quot;Content-Transfer-Encoding: binary&quot;).append(LINE_FEED);
+        writer.append(LINE_FEED);
+        writer.flush();
+
+        FileInputStream inputStream = new FileInputStream(uploadFile);
+        byte[] buffer = new byte[4096];
+        int bytesRead = -1;
+        while ((bytesRead = inputStream.read(buffer)) != -1) {
+            outputStream.write(buffer, 0, bytesRead);
+        }
+        outputStream.flush();
+        inputStream.close();
+
+        writer.append(LINE_FEED);
+        writer.flush();    
+    }
+
+    /**
+     * Adds a header field to the request.
+     * @param name - name of the header field
+     * @param value - value of the header field
+     */
+    public void addHeaderField(String name, String value) {
+        writer.append(name + &quot;: &quot; + value).append(LINE_FEED);
+        writer.flush();
+    }
+
+    /**
+     * Completes the request and receives response from the server.
+     * @return a list of Strings as response in case the server returned
+     * status OK, otherwise an exception is thrown.
+     * @throws IOException
+     */
+    public List&lt;String&gt; send() throws IOException {
+        List&lt;String&gt; response = new ArrayList&lt;String&gt;();
+
+        writer.append(LINE_FEED).flush();
+        writer.append(&quot;--&quot; + boundary + &quot;--&quot;).append(LINE_FEED);
+        writer.close();
+
+        // checks server's status code first
+        int status = httpConn.getResponseCode();
+        if (status == HttpURLConnection.HTTP_OK) {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    httpConn.getInputStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                response.add(line);
+            }
+            reader.close();
+            httpConn.disconnect();
+        } else {
+            InputStream is = httpConn.getErrorStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            String line;
+
+            StringBuilder builder = new StringBuilder();
+            while ((line = reader.readLine()) != null) {
+                builder.append(line);
+                builder.append(&quot;\r\n&quot;);
+            }
+            reader.close();
+            httpConn.disconnect();
+            throw new IOException(&quot;Server returned non-OK status: &quot; + status + &quot;\r\n&quot;+builder.toString());
+        }
+
+        return response;
+    }
+}
+
+String charset = &quot;UTF-8&quot;;
+        File uploadFile1 = new File(&quot;D:/NewsProject.war&quot;);
+        //String requestURL = &quot;http://localhost:8081/deploymanager/deploy/&quot;;
+        String requestURL = &quot;https://webgaddeployserver.azurewebsites.net/deploymanager/deploy/&quot;;
+        try {
+            MultipartUtils multipart = new MultipartUtils(requestURL, charset, header);
+
+            //multipart.addHeaderField(&quot;Authorization&quot;, &quot;Basic &quot; + basicAuthorization);
+
+            multipart.addFormField(&quot;deployPath&quot;, &quot;/newsreader&quot;);
+
+            multipart.addFilePart(&quot;warfile&quot;, uploadFile1);
+
+            List&lt;String&gt; response = multipart.send();
+
+            System.out.println(&quot;SERVER REPLIED:&quot;);
+
+            for (String line : response) {
+                System.out.println(line);
+            }
+
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }       
+
+</code></pre>
+<h2 id="read-property-value-in-resource-file">Read property value in resource file</h2>
+<pre><code class="language-java">public static String readPropertyValue(String propertyFileName, String key) {
+        try {
+            ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+            InputStream is = classloader.getResourceAsStream(propertyFileName);
+
+            Properties properties = new Properties();
+            properties.load(is);
+            return properties.getProperty(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return &quot;&quot;;
+        }       
+    }
+
+</code></pre>
+<h2 id="inputstream-to-string">InputStream to String</h2>
+<pre><code class="language-java">public static String inputStreamToString(InputStream is) throws IOException {
+        final int bufferSize = 1024;
+        final char[] buffer = new char[bufferSize];
+        final StringBuilder out = new StringBuilder();
+        Reader in = new InputStreamReader(is, &quot;UTF-8&quot;);
+        for (;;) {
+            int rsz = in.read(buffer, 0, buffer.length);
+            if (rsz &lt; 0)
+                break;
+            out.append(buffer, 0, rsz);
+        }
+        return out.toString();
+    }
+
+</code></pre>
+<h2 id="bufferedreader-to-string">BufferedReader to String</h2>
+<pre><code class="language-java">public static String bufferedReaderToString(BufferedReader reader) throws IOException {
+        StringBuffer jb = new StringBuffer();
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            jb.append(line);
+        }
+        return jb.toString();
+    }
+
+</code></pre>
+<h2 id="add-local-jar-file">Add local jar file</h2>
+<p><strong>Copy jar file to <code>lib\a.jar</code></strong></p>
+<p><strong>File pom.xml, add to <code>&lt;build&gt;</code></strong></p>
+<pre><code class="language-xml">&lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-install-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5.2&lt;/version&gt;            
+            &lt;executions&gt;
+                &lt;execution&gt;
+                    &lt;phase&gt;initialize&lt;/phase&gt;
+                    &lt;goals&gt;
+                        &lt;goal&gt;install-file&lt;/goal&gt;
+                    &lt;/goals&gt;
+                    &lt;configuration&gt;
+                        &lt;file&gt;${basedir}/lib/a.jar&lt;/file&gt;
+                        &lt;groupId&gt;vn.com.webgad.library&lt;/groupId&gt;
+                        &lt;artifactId&gt;webgad-library&lt;/artifactId&gt;
+                        &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;                        
+                        &lt;packaging&gt;jar&lt;/packaging&gt;                        
+                    &lt;/configuration&gt;
+                &lt;/execution&gt;
+            &lt;/executions&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+
+    &lt;pluginManagement&gt;
+        &lt;plugins&gt;
+            &lt;!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.--&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.eclipse.m2e&lt;/groupId&gt;
+                &lt;artifactId&gt;lifecycle-mapping&lt;/artifactId&gt;
+                &lt;version&gt;1.0.0&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;lifecycleMappingMetadata&gt;
+                        &lt;pluginExecutions&gt;
+                            &lt;pluginExecution&gt;
+                                &lt;pluginExecutionFilter&gt;
+                                    &lt;groupId&gt;
+                                        org.apache.maven.plugins
+                                    &lt;/groupId&gt;
+                                    &lt;artifactId&gt;
+                                        maven-install-plugin
+                                    &lt;/artifactId&gt;
+                                    &lt;versionRange&gt;
+                                        [2.5.2,)
+                                    &lt;/versionRange&gt;
+                                    &lt;goals&gt;
+                                        &lt;goal&gt;install-file&lt;/goal&gt;
+                                    &lt;/goals&gt;
+                                &lt;/pluginExecutionFilter&gt;
+                                &lt;action&gt;
+                                    &lt;ignore&gt;&lt;/ignore&gt;
+                                &lt;/action&gt;
+                            &lt;/pluginExecution&gt;
+                        &lt;/pluginExecutions&gt;
+                    &lt;/lifecycleMappingMetadata&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+
+</code></pre>
+<p><strong>Add to dependencies</strong></p>
+<pre><code class="language-xml">&lt;dependency&gt;
+        &lt;groupId&gt;vn.com.webgad.library&lt;/groupId&gt;
+        &lt;artifactId&gt;webgad-library&lt;/artifactId&gt;
+        &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+
+</code></pre>
+<h2 id="api-return-file">Api return file</h2>
+<pre><code class="language-java">@RequestMapping(value=&quot;/{id}/credential&quot;, method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    public ResponseEntity&lt;byte[]&gt; getCredential(@PathVariable String id, HttpServletRequest request) {      
+        try {
+
+            String content =&quot;abc&quot;;      
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentDisposition(ContentDisposition.parse(&quot;attachment; filename=\&quot;webgadSecret.json\&quot;&quot;));
+
+            ResponseEntity&lt;byte[]&gt; responseEntity = new ResponseEntity&lt;&gt;(content.getBytes(), headers, HttpStatus.OK);
+
+            return responseEntity;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new BusinessException(MessageConst.E_UNEXPECTED_ERROR, HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+</code></pre>
+<h2 id="debug-remote-application-in-eclipse">Debug remote application in Eclipse</h2>
+<h3 id="debug-general-application">Debug general application</h3>
+<pre><code class="language-bat">java -Xdebug -Xrunjdwp:transport=dt_socket,address=8998,server=y -jar myapp.jar
+</code></pre>
+<h3 id="debug-spark-application-running-locally">Debug Spark application running Locally</h3>
+<p>Add config:</p>
+<pre><code class="language-bat">agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-bat">spark-submit --master local --conf spark.driver.extraJavaOptions=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 --class org.apache.spark.examples.JavaWordCount spark-examples_2.12-3.0.1.jar
+</code></pre>
+<h3 id="debug-spark-application-running-on-remote-server">Debug Spark application running on Remote server</h3>
+<p>Run command:</p>
+<pre><code class="language-bat">export SPARK_SUBMIT_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5050
+</code></pre>
+<h3 id="configure-eclipse">Configure Eclipse</h3>
+<ol>
+<li>Go to Run -&gt; Debug Configurations
+ <img alt="images" src="../mdimages/Screenshot2021-11-07151810.jpg" /></li>
+<li>Create a new Remote Java Application configuration
+ <img alt="Screenshot2021-11-07152011" src="../mdimages/Screenshot2021-11-071520111.png" /></li>
+<li>Configure the remote application
+ <img alt="Screenshot2021-11-07152011" src="../mdimages/Screenshot2021-11-07152011.png" /></li>
+<li>If you would like to have this launch configuration in your favorites menu, In tab Common, check Debug
+ <img alt="images" src="../mdimages/Screenshot2021-11-07152605.jpg" /></li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../JasperReport/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Jasper Report" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Jasper Report
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../AesEncryption.java" class="md-footer__link md-footer__link--next" aria-label="Next: AesEncryption.java" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              AesEncryption.java
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>
