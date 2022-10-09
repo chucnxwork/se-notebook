@@ -3,6 +3,9 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.tracking
+    - toc.follow
+    - toc.integrate
 
 # Page tree
 nav:
