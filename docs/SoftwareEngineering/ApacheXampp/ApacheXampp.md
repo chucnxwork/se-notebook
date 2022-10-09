@@ -3,6 +3,7 @@
 ## Update document root
 
 **Find and update DocumentRoot**
+
 DocumentRoot "D:\1Projects\INPROGRESS\0127crminventoryms\ims\public"
 <Directory "D:\1Projects\INPROGRESS\0127crminventoryms\ims\public ">
  
@@ -22,6 +23,7 @@ DocumentRoot "D:\1Projects\INPROGRESS\0127crminventoryms\ims\public"
 ```
  
 **Find the `<IfModule alias_module></IfModule>`**
+
 Alias /directoryalias "C:\xampp\htdocs"
 
 ## Make virtual host

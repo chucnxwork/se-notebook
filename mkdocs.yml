@@ -3,3 +3,9 @@ theme:
   name: material
   features:
     - navigation.tabs
+
+# Page tree
+nav:
+  - Home: index.md
+  - Software Engineering:
+    - Apache/Xampp: SoftwareEngineering/ApacheXampp/ApacheXampp.md
