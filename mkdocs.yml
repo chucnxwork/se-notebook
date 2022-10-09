@@ -46,3 +46,9 @@ nav:
     - Hosting: SoftwareEngineering/Hosting/Hosting.md
     - HTML and Web: SoftwareEngineering/HTMLandWeb/HTML.md
     - Jasper Report: SoftwareEngineering/JasperReport.md
+    - Java:
+      - Java: SoftwareEngineering/Java/Java.md
+      - AesEncryption.java: SoftwareEngineering/Java/AesEncryption.java
+      - CustomHttpResponse.java: SoftwareEngineering/Java/CustomHttpResponse.java
+      - HttpRequestUtils.java: SoftwareEngineering/Java/HttpRequestUtils.java
+      - Utils.java: SoftwareEngineering/Java/Utils.java
